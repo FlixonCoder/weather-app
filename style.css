@@ -1,0 +1,175 @@
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #2a2a2a, #3c3c3c);
+    font-size: 1.5rem;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 2rem;
+    background-color: #2d2d2d;
+    box-shadow: 5px 5px 12px #1a1a1a, -5px -5px 12px #4a4a4a;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    background-color: #1f1f1f;
+    color: #fff;
+    box-shadow: inset 3px 3px 6px #141414, inset -3px -3px 6px #3a3a3a;
+    transition: background 0.3s ease;
+}
+
+.search input:focus {
+    background-color: #252525;
+}
+
+.search button {
+    background: #2d2d2d;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    color: #ccc;
+    font-size: 1.4rem;
+    box-shadow: 3px 3px 8px #1c1c1c, -3px -3px 8px #4c4c4c;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.search button:hover {
+    background: #242424;
+    box-shadow: inset 3px 3px 8px #141414, inset -3px -3px 8px #3a3a3a;
+}
+
+/* Card */
+.card {
+    border-radius: 2rem;
+    background-color: #2d2d2d;
+    box-shadow: 5px 5px 15px #1a1a1a, -5px -5px 15px #4a4a4a;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h4 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+#location {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+img#icon {
+    width: 30%;
+    max-width: 120px;
+    margin: 1rem 0;
+}
+
+#weather {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
+
+/* Reload Button */
+button.reload {
+    display: block;
+    margin: 1.5rem auto 0;
+    background: #2d2d2d;
+    border: none;
+    color: #ccc;
+    font-size: 1.8rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 12px #1a1a1a, -6px -6px 12px #4a4a4a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.reload:hover {
+    background: #242424;
+    box-shadow: inset 4px 4px 10px #141414, inset -4px -4px 10px #3a3a3a;
+}
+
+button.reload.spin i {
+    animation: spin 0.8s linear;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Queries */
+@media (max-width: 480px) {
+    body {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .search {
+        flex-direction: column;
+        padding: 1rem;
+        border-radius: 1.5rem;
+    }
+
+    .search button {
+        width: 100%;
+        border-radius: 0.8rem;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .card h4 {
+        font-size: 2rem;
+    }
+
+    img#icon {
+        width: 40%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        max-width: 400px;
+    }
+
+    .card h4 {
+        font-size: 2.5rem;
+    }
+}
